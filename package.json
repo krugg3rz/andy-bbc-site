@@ -10,5 +10,11 @@
     "nodemon": "^1.18.10",
     "sass": "^1.17.3",
     "typescript": "^3.4.1"
+  },
+  "scripts" : {
+    "tsc-watch": "tsc --watch",
+    "js": "concurrently \"yarn run tsc-watch\" \"yarn run nodemon\"",
+    "nodemon": "nodemon build/js/index.js",
+    "all-watch": "tsc-watch && sass-watch && concurrently && nodemon"
   }
 }
