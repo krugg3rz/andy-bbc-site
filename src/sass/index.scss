@@ -13,6 +13,21 @@ $white: white;
     // background: grey;
 }
 
+main {
+    padding: $s-md;
+}
+
+header {
+    color: rgb(255, 255, 255);
+    margin-top: $navHeight;
+    width: 100%;
+    background-color: red;
+    height: $navHeight;
+    padding: 10px;
+    font-family: sans-serif;
+    font-size: 27px;
+}
+
 .menu {
     display: flex;
 }
@@ -25,18 +40,22 @@ $white: white;
 
 ul {
     list-style: none;
+    border: solid 2px white;
     position: fixed;
     top: 50px;
     right: 0;
     width: 150px;
     text-align: center;
-    padding: 10px;
-    background-color: orange;
+    background-color: rgb(255, 255, 255);
+    // display: flex;
+    // flex-direction: column;
+    // justify-content: center;
+    // align-items: center;
 }
-
 
 li {
     background-color: transparent;
+    border: solid 2px white;
 }
 // .menu-container {
 //     display: flex;
@@ -45,20 +64,25 @@ li {
 
 .clickable {
     cursor: pointer;
-    border: 3px solid transparent;
     &:hover {
-        border-bottom-color: blue;
+        border-bottom-color: rgb(255, 0, 0);
     }
 }
 
+p {
+    padding: $s-sm;
+}
+
 nav {
-    color: white;
+    color: rgb(0, 0, 0);
+    border: solid 1px white;
+    border-bottom: 2px red solid;
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
-    height: 50px;
-    background-color: black;
+    height: $navHeight;
+    background-color: rgb(255, 255, 255);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -70,7 +94,7 @@ nav {
 }
 
 a {
-    color: white;
+    color: black;
     text-decoration: none;
 }
 
@@ -83,12 +107,15 @@ a {
     nav {
                 
         justify-content: flex-start;
-        
-       .andy {
-           display: flex;
-       }
 
-        a {
+       li {
+            height: $navHeight;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+       } 
+       
+       a {
             color: inherit;
             display: block;
             width: 100%;
@@ -96,13 +123,19 @@ a {
         }
         
         ul {
-            &:onClick {
-                display: block;
-            }
             position: unset;
             display: flex;
-            width: 1000%;
-            color: white;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: $navHeight;
+            color: rgb(0, 0, 0);
+            background-color: rgb(255, 255, 255);
+
+            &.hidden {
+                display: flex;
+            }
         }
 
         .menu {
