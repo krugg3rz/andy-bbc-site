@@ -52,6 +52,7 @@ li {
 }
 
 nav {
+    color: white;
     position: fixed;
     top: 0;
     left: 0;
@@ -63,19 +64,30 @@ nav {
     align-items: center;
 
     img {
-        height: 50px;
+        height: 30px;
         padding: 5px;
     }
 }
 
+a {
+    color: white;
+    text-decoration: none;
+}
 
+.hidden {
+    display: none;
+}
 
 @media only screen and (min-width: $breakPoint) {
 
     nav {
-        
+                
         justify-content: flex-start;
         
+       .andy {
+           display: flex;
+       }
+
         a {
             color: inherit;
             display: block;
@@ -84,6 +96,9 @@ nav {
         }
         
         ul {
+            &:onClick {
+                display: block;
+            }
             position: unset;
             display: flex;
             width: 1000%;

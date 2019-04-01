@@ -1,3 +1,4 @@
-let message = 'Hello Steve'
 
-console.log(message);
+let toggleDropdown = () => {
+    document.getElementById('links').classList.toggle('hidden');
+}

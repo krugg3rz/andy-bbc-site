@@ -38,6 +38,7 @@ li {
 }
 
 nav {
+  color: white;
   position: fixed;
   top: 0;
   left: 0;
@@ -49,13 +50,25 @@ nav {
   align-items: center;
 }
 nav img {
-  height: 50px;
+  height: 30px;
   padding: 5px;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+.hidden {
+  display: none;
 }
 
 @media only screen and (min-width: 1024px) {
   nav {
     justify-content: flex-start;
+  }
+  nav .andy {
+    display: flex;
   }
   nav a {
     color: inherit;
@@ -68,6 +81,9 @@ nav img {
     display: flex;
     width: 1000%;
     color: white;
+  }
+  nav ul:onClick {
+    display: block;
   }
   nav .menu {
     position: unset;
