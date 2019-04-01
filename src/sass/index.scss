@@ -1,8 +1,96 @@
-$red: red;
-$black: black;
+@import "variables.scss";
+
+$red: rgb(255, 0, 0);
+$black: rgb(74, 74, 74);
+$white: white;
 
 * {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
     font-family: arial;
-    background: black;
-    color: $red;
+    // color: $white;
+    // background: grey;
+}
+
+.menu {
+    display: flex;
+}
+
+.dropdown {
+    margin: 0 $s-sm;
+    color: $white;
+    // margin-top: $s-sm;
+}
+
+ul {
+    list-style: none;
+    position: fixed;
+    top: 50px;
+    right: 0;
+    width: 150px;
+    text-align: center;
+    padding: 10px;
+    background-color: orange;
+}
+
+
+li {
+    margin: 5px;
+}
+// .menu-container {
+//     display: flex;
+//     flex-direction: column;
+// }
+
+.clickable {
+    cursor: pointer;
+    border: 3px solid transparent;
+    &:hover {
+        border-color: blue;
+    }
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 50px;
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    img {
+        height: 50px;
+        padding: 5px;
+    }
+}
+
+
+
+@media only screen and (min-width: $breakPoint) {
+
+    nav {
+        
+        justify-content: flex-start;
+        
+        ul {
+            position: unset;
+            display: flex;
+            width: 1000%;
+            color: white;
+        }
+
+        .menu {
+            position: unset;
+            display: flex;
+            justify-content: flex-start;
+        }
+
+        .dropdown {
+            display: none;
+        }
+    }
 }
