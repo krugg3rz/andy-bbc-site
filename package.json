@@ -13,8 +13,9 @@
   },
   "scripts" : {
     "tsc-watch": "tsc --watch",
+    "sass-watch": "sass src/sass:build --watch",
     "js": "concurrently \"yarn run tsc-watch\" \"yarn run nodemon\"",
     "nodemon": "nodemon build/js/index.js",
-    "all-watch": "tsc-watch && sass-watch && concurrently && nodemon"
+    "all-build": "concurrently \"yarn run tsc-watch\" \"yarn run nodemon\" \"yarn run sass-watch\""
   }
 }
