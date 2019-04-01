@@ -19,7 +19,7 @@ $white: white;
 
 .dropdown {
     margin: 0 $s-sm;
-    color: $white;
+    color: inherit;
     // margin-top: $s-sm;
 }
 
@@ -36,7 +36,7 @@ ul {
 
 
 li {
-    margin: 5px;
+    background-color: transparent;
 }
 // .menu-container {
 //     display: flex;
@@ -47,7 +47,7 @@ li {
     cursor: pointer;
     border: 3px solid transparent;
     &:hover {
-        border-color: blue;
+        border-bottom-color: blue;
     }
 }
 
@@ -75,6 +75,13 @@ nav {
     nav {
         
         justify-content: flex-start;
+        
+        a {
+            color: inherit;
+            display: block;
+            width: 100%;
+            height: 25px;
+        }
         
         ul {
             position: unset;

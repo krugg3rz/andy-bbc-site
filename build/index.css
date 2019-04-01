@@ -11,7 +11,7 @@
 
 .dropdown {
   margin: 0 10px;
-  color: white;
+  color: inherit;
 }
 
 ul {
@@ -26,7 +26,7 @@ ul {
 }
 
 li {
-  margin: 5px;
+  background-color: transparent;
 }
 
 .clickable {
@@ -34,7 +34,7 @@ li {
   border: 3px solid transparent;
 }
 .clickable:hover {
-  border-color: blue;
+  border-bottom-color: blue;
 }
 
 nav {
@@ -56,6 +56,12 @@ nav img {
 @media only screen and (min-width: 1024px) {
   nav {
     justify-content: flex-start;
+  }
+  nav a {
+    color: inherit;
+    display: block;
+    width: 100%;
+    height: 25px;
   }
   nav ul {
     position: unset;
