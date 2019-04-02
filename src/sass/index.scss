@@ -17,7 +17,7 @@ main {
     padding: $s-md;
 }
 
-header {
+body>header {
     color: rgb(255, 255, 255);
     margin-top: $navHeight;
     width: 100%;
@@ -40,7 +40,6 @@ header {
 
 ul {
     list-style: none;
-    border: solid 2px white;
     position: fixed;
     top: 50px;
     right: 0;
@@ -55,7 +54,7 @@ ul {
 
 li {
     background-color: transparent;
-    border: solid 2px white;
+    margin: 10px;
 }
 // .menu-container {
 //     display: flex;
@@ -65,7 +64,7 @@ li {
 .clickable {
     cursor: pointer;
     &:hover {
-        border-bottom-color: rgb(255, 0, 0);
+        border-bottom: solid 2px red;
     }
 }
 
@@ -75,8 +74,6 @@ p {
 
 nav {
     color: rgb(0, 0, 0);
-    border: solid 1px white;
-    border-bottom: 2px red solid;
     position: fixed;
     top: 0;
     left: 0;
@@ -102,8 +99,40 @@ a {
     display: none;
 }
 
+article {
+    margin-bottom: $s-sm;
+    img {
+        width: 100%;
+    }
+    .content {
+        padding: $s-md;
+    }
+    header {
+        font-size: x-large;
+        margin-bottom: $s-sm;
+    }
+    small {
+        display: block;
+        margin-top: 10px;
+        color: #222222
+    }
+    time {
+        margin-right: $s-sm;
+    }
+}
+
+.articles {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: $s-md;
+}
+
 @media only screen and (min-width: $breakPoint) {
 
+    .articles {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    
     nav {
                 
         justify-content: flex-start;
@@ -113,6 +142,9 @@ a {
             display: flex;
             justify-content: center;
             align-items: center;
+            &:hover {
+                border-bottom-color: rgb(255, 0, 0);
+            }
        } 
        
        a {
@@ -126,7 +158,7 @@ a {
             position: unset;
             display: flex;
             flex-direction: row;
-            justify-content: center;
+            justify-content: space-between;
             align-items: center;
             width: 100%;
             height: $navHeight;
