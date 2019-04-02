@@ -18,4 +18,7 @@ window.toggleDropdown = function (e) {
     e.preventDefault();
     document.getElementById('links').classList.toggle('hidden');
 };
+window.doFilter = function (filter) {
+    console.log(filter);
+};
 //# sourceMappingURL=index.js.map

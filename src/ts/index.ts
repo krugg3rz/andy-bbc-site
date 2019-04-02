@@ -7,7 +7,7 @@ const addToPage = (articles: IArticleData) => {
         let dateObject = new Date(date);
         return dateObject.toLocaleTimeString();
     }
-    
+
     let html = `<article>
                 <div
                 class="image"
@@ -56,4 +56,8 @@ newsData.articles.forEach(addToPage);
 (<any>window).toggleDropdown = (e: MouseEvent) => {
     e.preventDefault();
     document.getElementById('links').classList.toggle('hidden');
+}
+
+(<any>window).doFilter = (filter) => {
+    console.log(filter);
 }

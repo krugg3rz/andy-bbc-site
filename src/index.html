@@ -38,6 +38,20 @@
         NEWS
     </header>
     <main>
+        <fieldset class="filter">
+            <label for="filter-all">
+                <input onClick="doFilter('')" id="filter-all" name="filter" type="radio" checked>
+                All
+            </label>
+            <label for="filter-yahoo">
+                <input onClick="doFilter('Yahoo.com')" id="filter-yahoo" name="filter" type="radio" checked>
+                yahoo.com
+            </label>
+            <label for="filter-bitcoinist">
+                <input onClick="doFilter('Bitcoinist.com')" id="filter-bitcoinist" name="filter" type="radio" checked>
+                Bitcoinist.com
+            </label>
+        </fieldset>
         <div id="articles">
         </div>
     </main>

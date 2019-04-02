@@ -19,6 +19,9 @@ window.toggleDropdown = function (e) {
     e.preventDefault();
     document.getElementById('links').classList.toggle('hidden');
 };
+window.doFilter = function (filter) {
+    console.log(filter);
+};
 
 },{"./newsData":2}],2:[function(require,module,exports){
 "use strict";
