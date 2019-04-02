@@ -104,6 +104,11 @@ article {
     img {
         width: 100%;
     }
+    .image {
+        background-size: cover;
+        background-position: center;
+        height: 200px;
+    }
     .content {
         padding: $s-md;
     }
