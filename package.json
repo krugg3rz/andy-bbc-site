@@ -11,11 +11,15 @@
     "sass": "^1.17.3",
     "typescript": "^3.4.1"
   },
-  "scripts" : {
+  "scripts": {
     "tsc-watch": "tsc --watch",
     "sass-watch": "sass src/sass:build --watch",
     "js": "concurrently \"yarn run tsc-watch\" \"yarn run nodemon\"",
     "nodemon": "nodemon build/js/index.js",
-    "all-build": "concurrently \"yarn run tsc-watch\" \"yarn run nodemon\" \"yarn run sass-watch\""
+    "bundle": "watchify build/js/index.js -o build/bundle.js",
+    "all-build": "concurrently \"yarn run tsc-watch\" \"yarn run sass-watch\" \"yarn run bundle\""
+  },
+  "dependencies": {
+    "browserify": "^16.2.3"
   }
 }
