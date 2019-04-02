@@ -2,6 +2,12 @@ import data from './newsData'
 
 const addToPage = (articles: IArticleData) => {
     let image = (articles.urlToImage) ? articles.urlToImage: "../src/assets/placeholder-image.jpg";
+    
+    const getFriendlyTime = (date:string):string => {
+        let dateObject = new Date(date);
+        return dateObject.toLocaleTimeString();
+    }
+    
     let html = `<article>
                 <div
                 class="image"
@@ -9,7 +15,7 @@ const addToPage = (articles: IArticleData) => {
                 <div class="content">
                     <header>${articles.title}</header>
                     <small>
-                        <span class="time">14:50</span>
+                        <span class="time">${getFriendlyTime(articles.publishedAt)}</span>
                         <span class="source">Business Insider</span>
                     </small>
                     <div class="description">
