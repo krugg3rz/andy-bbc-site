@@ -103,14 +103,14 @@ article time {
   margin-right: 10px;
 }
 
-.articles {
+#articles {
   display: grid;
   grid-template-columns: 1fr;
   grid-gap: 15px;
 }
 
 @media only screen and (min-width: 1024px) {
-  .articles {
+  #articles {
     grid-template-columns: 1fr 1fr 1fr;
   }
 
